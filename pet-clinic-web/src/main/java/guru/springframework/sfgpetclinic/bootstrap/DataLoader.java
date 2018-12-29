@@ -25,12 +25,6 @@ public class DataLoader implements CommandLineRunner {
 		this.petService = petService;
 	}
 
-
-
-
-
-
-
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
