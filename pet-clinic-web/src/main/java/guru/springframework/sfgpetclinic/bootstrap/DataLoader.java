@@ -1,5 +1,6 @@
 package guru.springframework.sfgpetclinic.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,16 +16,19 @@ import guru.springframework.sfgpetclinic.services.map.VetServiceMap;
 @Component
 public class DataLoader implements CommandLineRunner {
 	
-	private final OwnerService ownerService; 
-	private final VetService vetService;
-	private final PetService petService;
+	@Autowired
+	OwnerService ownerService; 
+	@Autowired
+	VetService vetService;
+	@Autowired
+	PetService petService;
 	
-	public DataLoader(OwnerService ownerService, VetService vetService, PetService petService) {
+	/*public DataLoader(OwnerService ownerService, VetService vetService, PetService petService) {
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petService = petService;
 	}
-
+*/
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
